@@ -19,4 +19,6 @@ RUN echo "*** Installing $PACKAGES" \
 
 RUN git clone https://github.com/CopernicaMarketingSoftware/PHP-CPP.git \
     && cd PHP-CPP \
-    && make
+    && make \
+    && make install \
+    && rm -rf /PHP-CPP
