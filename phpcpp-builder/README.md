@@ -17,7 +17,7 @@ docker push samber/phpcpp-builder:7.2-2.1.1
 ```
 docker run --rm -it \
 	-v $(pwd):/app \
-  --working-dir /app
+  --workdir /app \
 	samber/phpcpp-builder:7.2-2.1.1 \
 	<command-to-build-your-extension>
 ```
