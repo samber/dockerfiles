@@ -1,5 +1,5 @@
 
-# epitechcontent/epitest-docker for GUI project
+# epitechcontent/epitest-docker with support for GUI project
 
 ## Setup
 
