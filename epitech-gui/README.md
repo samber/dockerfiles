@@ -36,3 +36,7 @@ From your VNC client, connect to localhost:5900 with "epitech" password.
 ## Web client
 
 Just open [http://localhost:5980](http://localhost:5980) ;)
+
+## Troubleshooting
+
+If VNC server crashed, just restart the container ;)
