@@ -10,7 +10,7 @@ RUN git clone https://github.com/novnc/noVNC.git /usr/src/app/noVNC \
 
 RUN wget https://dl.bintray.com/tigervnc/stable/tigervnc-el7.repo -O /etc/yum.repos.d/tigervnc.repo \
     && yum update -y \
-    && yum -y install tigervnc-server \
+    && yum -y install tigervnc-server freeglut-devel glm-devel \
     && yum clean all
 
 COPY start_vnc.sh /
