@@ -9,7 +9,7 @@ CMD ["/run.sh"]
 
 # Install packages
 RUN apt-get update \
-    && apt-get -y install openssh-server sudo \
+    && apt-get -y install openssh-server sudo python3 gpg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
