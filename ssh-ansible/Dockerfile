@@ -11,7 +11,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 
 # Install packages
 RUN apt-get update \
-    && apt-get -y install openssh-server sudo python3 python3-setuptools gpg curl \
+    && apt-get -y install openssh-server sudo python3 python3-setuptools python3-pip gpg curl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
