@@ -5,7 +5,9 @@ MAINTAINER "Samuel Berthe" <dev@samuel-berthe.fr>
 ENV DEBIAN_FRONTEND=noninteractive
 
 EXPOSE 22
-CMD ["/run.sh"]
+ENTRYPOINT ["/run.sh"]
+#CMD ["systemd"]
+CMD ["/usr/sbin/sshd", "-D"]
 
 # Install packages
 RUN apt-get update \
