@@ -2,7 +2,8 @@ FROM debian:stretch
 
 MAINTAINER "Samuel Berthe" <dev@samuel-berthe.fr>
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive \
+    PACKAGES="openssh-server sudo python-setuptools python-pip python3 python3-setuptools python3-pip gpg curl"
 
 EXPOSE 22
 ENTRYPOINT ["/run.sh"]
@@ -11,7 +12,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 
 # Install packages
 RUN apt-get update \
-    && apt-get -y install openssh-server sudo python3 python3-setuptools python3-pip gpg curl \
+    && apt-get -y install ${PACKAGES} \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
