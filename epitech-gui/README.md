@@ -12,6 +12,14 @@ alias fedora-gui='docker run --rm -it -v $(pwd):/app -w /app -p 5900-6000:5900-6
 
 Install a VNC client (such as [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)).
 
+# Build
+
+```bash
+docker pull epitechcontent/epitest-docker
+docker build -t samber/epitech-gui .
+docker push samber/epitech-gui
+```
+
 ## Run
 
 ```
